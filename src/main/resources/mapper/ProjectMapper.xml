@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.taoche.study_5.mapper.ProjectMapper">
+
+    <resultMap id="ProjectMap" type="com.taoche.study_5.model.Project">
+        <id property="id" column="id"/>
+        <result property="projectName" column="project_name"/>
+        <result property="projectCreateDate" column="project_create_date"/>
+    </resultMap>
+
+    <select id="findProjectAll" resultMap="ProjectMap">
+        SELECT *
+        FROM Project
+    </select>
+
+
+
+</mapper>

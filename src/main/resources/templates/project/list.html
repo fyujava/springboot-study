@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>项目列表</h2>
+<div>
+    <ul>
+        <li th:each="project:${projectList}">
+            <p>ID:<span th:text="${project.id}"></span></p>
+            <p>名称:<span th:text="${project.projectName}"></span></p>
+            <p>日期:<span th:text="${project.getProjectCreateDate()}"></span></p>
+        </li>
+    </ul>
+</div>
+</body>
+</html>
